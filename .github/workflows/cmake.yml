@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - compiler_driver: g++
+        - compiler_driver: g++-12
           compiler_prefix: /usr/bin
     steps:
     - name: Show bin directory

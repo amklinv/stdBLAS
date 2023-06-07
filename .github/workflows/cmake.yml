@@ -68,7 +68,7 @@ jobs:
     - name: Configure CMake
       shell: bash
       working-directory: stdblas-build
-      run: cmake $GITHUB_WORKSPACE/stdblas-src -Dmdspan_DIR=$GITHUB_WORKSPACE/mdspan-install/lib/cmake/mdspan -DLINALG_ENABLE_TESTS=On -DLINALG_ENABLE_EXAMPLES=On -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/stdblas-install
+      run: cmake $GITHUB_WORKSPACE/stdblas-src -DCMAKE_CXX_COMPILER=g++-12 -Dmdspan_DIR=$GITHUB_WORKSPACE/mdspan-install/lib/cmake/mdspan -DLINALG_ENABLE_TESTS=On -DLINALG_ENABLE_EXAMPLES=On -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/stdblas-install
 
     - name: Upload workspace
       uses: actions/upload-artifact@v2

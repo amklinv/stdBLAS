@@ -16,9 +16,6 @@ jobs:
         - compiler_driver: g++-12
           compiler_prefix: /usr/bin
     steps:
-    - name: Show lib directory
-      run: ls /usr/local/lib64
-      
     - name: Create Build Environment
       run: cmake -E make_directory mdspan-build
       

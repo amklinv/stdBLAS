@@ -16,8 +16,8 @@ jobs:
         - compiler_driver: g++-12
           compiler_prefix: /usr/bin
     steps:
-    - name: Show bin directory
-      run: ls /usr/bin
+    - name: Show lib directory
+      run: ls /usr/local/lib64
       
     - name: Create Build Environment
       run: cmake -E make_directory mdspan-build
@@ -105,8 +105,6 @@ jobs:
         
   test-stdBLAS:
     runs-on: ubuntu-latest
-    container:
-      image: amklinv/mdspan-dependencies:latest
     needs: build-stdblas
     
     steps:

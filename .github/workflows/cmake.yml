@@ -16,6 +16,9 @@ jobs:
         - compiler_driver: g++
           compiler_prefix: /usr/bin
     steps:
+    - name: Show bin directory
+      run: ls /usr/bin
+      
     - name: Create Build Environment
       run: cmake -E make_directory mdspan-build
       

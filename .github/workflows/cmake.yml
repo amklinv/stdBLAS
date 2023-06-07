@@ -30,7 +30,7 @@ jobs:
       
     - name: Configure CMake
       working-directory: mdspan-build
-      run: cmake $GITHUB_WORKSPACE/mdspan-src -DCMAKE_CXX_COMPILER=g++12 -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/mdspan-install
+      run: cmake $GITHUB_WORKSPACE/mdspan-src -DCMAKE_CXX_COMPILER=g++-12 -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/mdspan-install
       
     - name: Build
       working-directory: mdspan-build
